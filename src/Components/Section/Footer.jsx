@@ -6,21 +6,26 @@ function Footer() {
       <footer id="footer">
         <div className="container">
           <h3>Siddhant Singh Thakur</h3>
-          {/* <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> */}
           <div className="social-links">
-            <a href="#" className="twitter">
+            <a href="https://twitter.com/siddhanthakur43" className="twitter">
               <i className="bx bxl-twitter" />
             </a>
-            <a href="#" className="facebook">
+            <a
+              href="https://www.facebook.com/siddhant.singhthakur.33"
+              className="facebook"
+            >
               <i className="bx bxl-facebook" />
             </a>
-            <a href="#" className="instagram">
+            <a
+              href="https://www.instagram.com/_wakeupsidd"
+              className="instagram"
+            >
               <i className="bx bxl-instagram" />
             </a>
-            <a href="#" className="google-plus">
-              <i className="bx bxl-skype" />
-            </a>
-            <a href="#" className="linkedin">
+            <a
+              href="https://www.linkedin.com/in/siddhanthakur"
+              className="linkedin"
+            >
               <i className="bx bxl-linkedin" />
             </a>
           </div>
