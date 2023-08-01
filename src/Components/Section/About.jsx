@@ -22,6 +22,7 @@ const About = () => {
                 id="photo"
                 src="assets\img\profile.jpg"
                 width="80%"
+                alt="Profile"
               />
             </div>
             <div className="col-lg-9 para-text">

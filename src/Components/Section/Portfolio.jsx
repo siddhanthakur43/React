@@ -35,7 +35,7 @@ function Portfolio() {
                 <img
                   src="assets\img\portfolio\para.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Profile"
                 />
                 <div className="portfolio-info">
                   <h4>Paraglider</h4>
@@ -74,17 +74,17 @@ function Portfolio() {
                 <img
                   src="assets\img\portfolio\Bigboss.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Profile"
                 />
                 <img
                   src="assets\img\portfolio\Bigboss1.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Profile"
                 />
                 <img
                   src="assets\img\portfolio\Bigboss2.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Profile"
                 />
                 <div className="portfolio-info">
                   <h4>Bigboss</h4>
@@ -116,7 +116,7 @@ function Portfolio() {
                 <img
                   src="assets\img\portfolio\mini.jpeg"
                   className="img-fluid"
-                  alt=""
+                  alt="Profile"
                 />
                 <div className="portfolio-info">
                   <h4>Mini Bigboss</h4>
