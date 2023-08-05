@@ -7,7 +7,7 @@ const About = () => {
         <div className="container" data-aos="fade-up">
           <div className="section-title">
             <h2>About</h2>
-            <p>  
+            <p>
               I am Mechanical Engineering graduate, with deep interest in
               Computer Vision, Automation and robotics which are well
               demonstrated in my projects. I have represented and captained
@@ -96,11 +96,11 @@ const About = () => {
                       </tr>
                       <tr>
                         <td style={{ color: "var(--my-blue)" }}>
-                          Previous Role
+                          Current Role
                         </td>
-                        <td>Application Engineer Trainee @ Newgen</td>
+                        <td>System Engineer Trainee @ Infosys</td>
                         <td style={{ color: "var(--my-blue)" }}>City</td>
-                        <td>Noida, UP</td>
+                        <td>Gurgaon, Haryana</td>
                       </tr>
                     </tbody>
                   </table>
@@ -183,43 +183,53 @@ const About = () => {
                   <hr style={{ borderColor: "var(--my-blue)" }} />
                   <br />
                   <div className="resume-item">
-                    <h4>Application Engineer Trainee</h4>
-                    <h5>July 2021 - September 2021</h5>
+                    <h4>System Engineer </h4>
+                    <h5>Feb 2022 - Current</h5>
                     <p>
-                      <em>Newgen Software Technologies Limited</em>
+                      <em>Infosys Limited</em>
                     </p>
                     <p></p>
+                    <p>
+                      Currently working in Travel and Lifestyle Services team as
+                      a Frontend Engineer, for production deployed CRM product
+                      called OPUS, building on the top of a micro- frontend
+                      technology knows as one-app.
+                    </p>
                     <li>
-                      Worked as a part of a team responsible for buisness
-                      process management.
+                      Delivering exciting new features and playing a key part
+                      member as an agile member of scrum team.
+                    </li>
+                    <li>Following SDLC best practices.</li>
+                    <li>
+                      Working in agile environment to produce rapid development
+                      in the iterations for the client.
                     </li>
                     <li>
-                      Coded, built and debugged sw and security config files for
-                      Infineon Aurix
+                      Interacting with stakeholders in order to understand the
+                      requirement and suggesting different solutions.
                     </li>
+                    <li>Writing unit test cases with jest and RTL.</li>
                     <p />
                   </div>
                   <div className="resume-item">
-                    <h4> Mechanical Engineer Trinee</h4>
-                    <h5>July 2019 - August 2019</h5>
+                    <h4> System Engineer Trinee</h4>
+                    <h5>Nov 2021 - Jan 2022</h5>
                     <p>
-                      <em>Indore Tools Limited</em>
+                      <em>Infosys Limited</em>
                     </p>
                     <p></p>
-                    <li>
-                      learnt about manufacturing of high speed cutting tools.
-                    </li>
-                    <li />
+                    <li>Trained in Java, Spring, Spring boot and SQL.</li>
+                
                     <p />
                   </div>
                   <div className="resume-item">
-                    <h4>Mechatronics Engineering</h4>
+                    <h4>Mechatronics Engineer Intern</h4>
                     <h5>January 2018 - March 2020</h5>
                     <p>
                       <em>I bot Technologies.</em>
                     </p>
                     <p></p>
-                    <li>We developed, designed the combat robotics.</li>
+                    <li>We developed, designed the combat robots.</li>
                     <li>
                       Reported and optimised day to day bugs in robotics system
                       design.

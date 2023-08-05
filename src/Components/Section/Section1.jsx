@@ -7,7 +7,7 @@ function Section1() {
         <div className="container" data-aos="zoom-in" data-aos-delay={100}>
           <h1>Siddhant Singh Thakur</h1>
           <p>
-            I'm a{" "}
+            I'm a FrontEnd Developer
             <span
               className="typed"
               data-typed-items="Mechanical Engineer. ,Mechatronics Engineer. ,Robotics Enthusiast. ,Photographer. , "

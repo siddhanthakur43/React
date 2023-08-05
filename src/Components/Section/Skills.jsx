@@ -1,4 +1,13 @@
 import React from "react";
+import {
+  BiLogoReact,
+  BiLogoRedux,
+  BiLogoMongodb,
+  BiData,
+BiLogoSpringBoot, BiLogoNodejs, BiLogoDocker} from "react-icons/bi";
+import { FaJenkins } from "react-icons/fa";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { AiOutlineCloudServer } from "react-icons/ai";
 
 function Skills() {
   return (
@@ -18,7 +27,7 @@ function Skills() {
             <div className="col-lg-6">
               <div className="progress">
                 <span className="skill">
-                  C/C++<i className="val">95%</i>
+                  JavaScript<i className="val">95%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
@@ -33,7 +42,7 @@ function Skills() {
               </div>
               <div className="progress">
                 <span className="skill">
-                  Python<i className="val">90%</i>
+                  React<i className="val">90%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
@@ -48,7 +57,7 @@ function Skills() {
               </div>
               <div className="progress">
                 <span className="skill">
-                  JavaScript <i className="val">75%</i>
+                  Redux <i className="val">75%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
@@ -56,6 +65,36 @@ function Skills() {
                     role="progressbar"
                     style={{ width: "75%" }}
                     aria-valuenow={75}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                  />
+                </div>
+              </div>
+              <div className="progress">
+                <span className="skill">
+                  JEST <i className="val">85%</i>
+                </span>
+                <div className="progress-bar-wrap">
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    style={{ width: "85%" }}
+                    aria-valuenow={85}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                  />
+                </div>
+              </div>
+              <div className="progress">
+                <span className="skill">
+                  Jenkins <i className="val">85%</i>
+                </span>
+                <div className="progress-bar-wrap">
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    style={{ width: "85%" }}
+                    aria-valuenow={85}
                     aria-valuemin={0}
                     aria-valuemax={100}
                   />
@@ -80,7 +119,7 @@ function Skills() {
               </div>
               <div className="progress">
                 <span className="skill">
-                  Arduino <i className="val">85%</i>
+                  HTML <i className="val">85%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
@@ -95,7 +134,22 @@ function Skills() {
               </div>
               <div className="progress">
                 <span className="skill">
-                  Catia <i className="val">85%</i>
+                  CSS <i className="val">85%</i>
+                </span>
+                <div className="progress-bar-wrap">
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    style={{ width: "85%" }}
+                    aria-valuenow={85}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                  />
+                </div>
+              </div>
+              <div className="progress">
+                <span className="skill">
+                  RTL <i className="val">85%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
@@ -165,8 +219,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i className="ri-store-line" style={{ color: "#ffbb2c" }} />
-                  <h3>OpenCV</h3>
+                  <BiLogoReact />
+                  <h3>React</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
@@ -174,8 +228,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i className="ri-database-2-line" />
-                  <h3>NumPy</h3>
+                  <BiLogoRedux style={{ color: "#800080" }} />
+                  <h3>Redux</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
@@ -183,10 +237,7 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i
-                    className="ri-calendar-todo-line"
-                    style={{ color: "#e80368" }}
-                  />
+                  <AiOutlineCloudServer />
                   <h3>Azure</h3>
                 </div>
               </div>
@@ -195,8 +246,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i className="ri-home-5-line" />
-                  <h3>Catia</h3>
+                  <FaJenkins />
+                  <h3>Jenkins</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4">
@@ -204,11 +255,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i
-                    className="ri-database-2-line"
-                    style={{ color: "#47aeff" }}
-                  />
-                  <h3>Autocad</h3>
+                  <BiLogoDocker style={{ color: "#00b7eb" }} />
+                  <h3>Docker</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4">
@@ -216,11 +264,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i
-                    className="ri-gradienter-line"
-                    style={{ color: "#ffa76e" }}
-                  />
-                  <h3>Creo</h3>
+                  <BiLogoNodejs />
+                  <h3>Node</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4">
@@ -228,11 +273,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i
-                    className="ri-file-list-3-line"
-                    style={{ color: "#11dbcf" }}
-                  />
-                  <h3>Matlab</h3>
+                  <BiLogoSpringBoot style={{ color: "#00ff00" }} />
+                  <h3>Spring</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4">
@@ -240,11 +282,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i
-                    className="ri-price-tag-2-line"
-                    style={{ color: "#4233ff" }}
-                  />
-                  <h3>Linux</h3>
+                  <BiLogoSpringBoot style={{ color: "#00ff00 " }} />
+                  <h3>Springboot</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4">
@@ -252,8 +291,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i className="ri-anchor-line" style={{ color: "#b2904f" }} />
-                  <h3>Arduino</h3>
+                  <FaJenkins />
+                  <h3>Jenkins</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4">
@@ -261,8 +300,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i className="ri-disc-line" style={{ color: "#b20969" }} />
-                  <h3>Trace 32 Lauterbach</h3>
+                  <BiData />
+                  <h3>MySQL</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4">
@@ -270,11 +309,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i
-                    className="ri-base-station-line"
-                    style={{ color: "#ff5828" }}
-                  />
-                  <h3>AUTOSAR</h3>
+                  <BiLogoMongodb />
+                  <h3>MongoDB</h3>
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 mt-4">
@@ -282,11 +318,8 @@ function Skills() {
                   className="icon-box"
                   style={{ backgroundColor: "rgba(0,100,230,0.1)" }}
                 >
-                  <i
-                    className="ri-fingerprint-line"
-                    style={{ color: "#29cc61" }}
-                  />
-                  <h3>AEEE Pro</h3>
+                  <GiArtificialIntelligence />
+                  <h3>Propmt Engineering</h3>
                 </div>
               </div>
             </div>
