@@ -9,3 +9,39 @@ React.createElement takes 3 arguments
 React.createElement at the end is an object => HTML(browser understands)
 render puts html child inside root
 render replaces the whole code inside the root
+
+
+
+React.createElement => Object => HTML
+const heading = React.createElement('h1', { id: 'heading'}, "Namaste React 🚀 ")
+
+JSX -> HTML or XML Like syntax
+JSX(transpiles before reaching to js) -PARCEL-Babel
+JSX -> Babel transpiles -> React.createElement - ReactElement(JS Object) -> HTML Element(render)
+const jsxHeading = <h1 id="heading" className="sid" tabIndex='5'>Namaste React 🚀 using JSX</h1>
+
+#React Element
+const jsxHeading = (
+    <h1 id="heading" className="sid" tabIndex='5'>
+        Namaste React 🚀 using JSX
+    </h1>);
+
+#React Functional Component
+const FunctionalComponent1 = () => (
+    <div id="container">
+        <h1 id="heading">Functional Component1</h1>
+    </div>
+);
+
+#Component composition-> component component
+const JsxHeading = () =>(
+    <h1 id="heading" className="sid" tabIndex='5'>
+        Namaste React 🚀 using JSX
+    </h1>);
+
+const FunctionalComponent1 = () => (
+    <div id="container">
+        <JsxHeading />
+        <h1 id="heading1">Functional Component1</h1>
+    </div>
+);
