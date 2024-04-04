@@ -45,3 +45,13 @@ const FunctionalComponent1 = () => (
         <h1 id="heading1">Functional Component1</h1>
     </div>
 );
+
+
+#React Hooks
+Normal JS utility functions
+- useState()
+- useEffect()
+
+virtual dom
+react fiber 
+diff algorithm 
