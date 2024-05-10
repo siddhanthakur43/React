@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
     const [restaurantList, setRestaurantList] = useState([])
     const [search, setSearch] = useState('');
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-    console.log('body Render');
+    console.log(filteredRestaurant);
     
     useEffect(() => {
         fetchData();
@@ -16,12 +17,11 @@ const Body = () => {
     const fetchData = async () => {
         const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         const json = await data.json();
-        console.log(json);
         setRestaurantList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
     //Conditional Rendering
-    if (restaurantList?.length === 0) {
+    if (filteredRestaurant?.length === 0) {
         return (<Shimmer />
         )
     };
@@ -36,13 +36,13 @@ const Body = () => {
         </div>
         <button className="filter-btn" onClick={() => {
             let filteredList = restaurantList.filter((res) => res?.info?.avgRating > 4.2);
-            setRestaurantList(filteredList);
+                setFilteredRestaurant(filteredList);
         }}>
             Top Rated Restaurant</button>
         </div>
         <div className="res-container">
-            {
-                filteredRestaurant?.map((restaurant, index) => <RestaurantCard key={index} resData={restaurant} />)
+            { 
+                filteredRestaurant?.map((restaurant) => <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id }><RestaurantCard resData={restaurant} /></Link>)
             }
 
         </div>
