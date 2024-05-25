@@ -3,12 +3,13 @@ import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../hooks/useOnlineStatus";
 
 const Body = () => {
     const [restaurantList, setRestaurantList] = useState([])
     const [search, setSearch] = useState('');
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-    console.log(filteredRestaurant);
+    const onlineStatus = useOnlineStatus();
     
     useEffect(() => {
         fetchData();
@@ -21,11 +22,16 @@ const Body = () => {
         setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
     //Conditional Rendering
-    if (filteredRestaurant?.length === 0) {
-        return (<Shimmer />
+
+    if (!onlineStatus) {
+        return (
+            <h1>
+                You are offline check your internet Connection!!
+            </h1>
         )
-    };
-    return <div className="body">
+    }
+    
+    return filteredRestaurant?.length === 0 ? <Shimmer /> : (<div className="body">
         <div className="filter">
         <div className="search-bar">
             <input type='text' placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)}></input>
@@ -46,7 +52,7 @@ const Body = () => {
             }
 
         </div>
-    </div>
+    </div>)
 }
 
 export default Body;
