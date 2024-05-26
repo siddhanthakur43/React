@@ -12,28 +12,28 @@ const Header = () => {
     //If empty dependecy array is passed then it will be called just once after render
     //If something is passed in dependency array then it will be called whenever the dependency changes.
     return (
-        <div className="header">
+        <div className="flex justify-between bg-pink-100 shadow-md">
         <div className="logo-container">
-            <img className="logo" src={LOGO_URL}></img>
+            <img className="w-24 p-2 m-2" src={LOGO_URL}></img>
         </div>
-        <div className="nav-items">
-            <ul>
-                <li>
+        <div className="flex items-center">
+            <ul className="flex p-2 m-2">
+                <li className="px-3">
                     Online Status: { onlineStatus ? '🟢' : '🔴'}
                 </li>
-                <li>
+                <li className="px-3">
                     <Link to='/'>Home</Link>
                 </li>
-                <li>
+                <li className="px-3">
                     <Link to='/about'>About Us</Link>
                 </li>
-                <li>
+                <li className="px-3">
                     <Link to='/contact'>Contact Us</Link>
                 </li>
-                <li>
+                <li className="px-3">
                     <Link to='/grocerry'>Grocerry</Link>
                 </li>
-                <li>
+                <li className="px-3">
                     <Link to='/cart'>Cart</Link>
                 </li>
                 <button className="login-btn" onClick={() => setLogin(!login) }>

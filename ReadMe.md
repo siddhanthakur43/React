@@ -54,4 +54,17 @@ Normal JS utility functions
 
 virtual dom
 react fiber 
-diff algorithm 
+diff algorithm
+
+#Episode 9
+custom Hook
+Lazy Loading
+
+#Episode 10 
+Css
+1) Using index.css file and then className in element
+2) SCSS, SASS-> Add Superpower
+3) Styled Components- https://styled-components.com/
+4) Material UI, Bootstrap, Ant Design , Chakra 
+4) Tailwind, postcss
+
