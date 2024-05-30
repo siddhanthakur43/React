@@ -12,7 +12,7 @@ const Header = () => {
     //If empty dependecy array is passed then it will be called just once after render
     //If something is passed in dependency array then it will be called whenever the dependency changes.
     return (
-        <div className="flex justify-between bg-pink-100 shadow-md">
+        <div className="flex justify-between shadow-md">
         <div className="logo-container">
             <img className="w-24 p-2 m-2" src={LOGO_URL}></img>
         </div>

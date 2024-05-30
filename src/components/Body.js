@@ -12,7 +12,6 @@ const Body = () => {
     const onlineStatus = useOnlineStatus();
     const RestaurantCardDiscount = DiscountRestaurant(RestaurantCard)
 
-    console.log(restaurantList);
 
     useEffect(() => {
         fetchData();
