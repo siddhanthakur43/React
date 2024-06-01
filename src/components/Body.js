@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import RestaurantCard, { DiscountRestaurant } from "./RestaurantCard";
 import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../hooks/useOnlineStatus";
+import UserContext from "../context/UserContext";
 
 const Body = () => {
     const [restaurantList, setRestaurantList] = useState([])
@@ -11,6 +12,8 @@ const Body = () => {
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const onlineStatus = useOnlineStatus();
     const RestaurantCardDiscount = DiscountRestaurant(RestaurantCard)
+    const { loggedInUser, setUserName } = useContext(UserContext);
+
 
 
     useEffect(() => {
@@ -24,7 +27,6 @@ const Body = () => {
         setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
     //Conditional Rendering
-
     if (!onlineStatus) {
         return (
             <h1>
@@ -56,6 +58,14 @@ const Body = () => {
                         setFilteredRestaurant(filteredList);
                     }}>
                         Top Rated Restaurant</button>
+                </div>
+                <div className="m-8 p-4">
+                    <label>UserName :</label>
+                    <input
+                        className="border border-black mx-2"
+                        value={loggedInUser}
+                        onChange={(e) => setUserName(e.target.value)}
+                    />
                 </div>
 
             </div>

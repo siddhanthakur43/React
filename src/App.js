@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,12 +8,31 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantMenu";
+import UserContext from "./context/UserContext";
 
 const AppLayout = () => {
-    return <div className="app">
-        <Header />
-        <Outlet />
-    </div>
+    const [userName, setUserName] = useState();
+
+    useEffect(() => {
+        //api call for userData
+        const data = {
+            name: "Siddhant",
+        };
+        setUserName(data.name);
+    }, []);
+
+    return (
+        <div className="app">
+            <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+                {
+                    // can provide separate userContext to header as well it is perfectly fine
+                }
+                {/* <UserContext.Provider value={{loggedInUser: 'Elon Musk'}}> */}
+                    <Header />
+                {/* </UserContext.Provider> */}
+                <Outlet />
+            </UserContext.Provider>
+        </div>)
 }
 
 //lazy Loading

@@ -1,4 +1,5 @@
 import { Component } from "react";
+import UserContext from "../context/UserContext";
 
 class UserClass extends Component {
     constructor(props) {
@@ -9,10 +10,8 @@ class UserClass extends Component {
             location: 'dummy location',
             avatar_url: 'avatar_url'}
         }
-        console.log('constructor');
     }
     async componentDidMount() {
-        console.log('componentDidMount');
         const data = await fetch('https://api.github.com/users/siddhanthakur43');
         const json = await data.json();
         this.setState({
@@ -20,19 +19,19 @@ class UserClass extends Component {
         })
     }
     componentDidUpdate() {
-        console.log('componentDidUpdate');
 
     }
     componentWillUnmount() {
-        console.log('componentWillUnmount');
     }
     render() {
         const { name, location, avatar_url } = this.state.userInfo;
-        console.log('render');
         return (
             <div className='user-info'>
                 <h1>Name: {name}</h1>
                 <h3>Location: {location}</h3>
+                <UserContext.Consumer>
+                    {({ loggedInUser }) => <h1 className="text-2xl">{ loggedInUser}</h1>}
+                </UserContext.Consumer>
                 <img src={avatar_url}></img>
                 <h3>Contact: siddhantthakur43@gmail.com</h3>
             </div>
