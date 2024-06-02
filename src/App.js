@@ -9,6 +9,8 @@ import Error from "./components/Error";
 import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "./context/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./store/appStore";
 
 const AppLayout = () => {
     const [userName, setUserName] = useState();
@@ -23,6 +25,7 @@ const AppLayout = () => {
 
     return (
         <div className="app">
+            <Provider store={appStore}>
             <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
                 {
                     // can provide separate userContext to header as well it is perfectly fine
@@ -31,7 +34,8 @@ const AppLayout = () => {
                     <Header />
                 {/* </UserContext.Provider> */}
                 <Outlet />
-            </UserContext.Provider>
+                </UserContext.Provider>
+                </Provider>
         </div>)
 }
 

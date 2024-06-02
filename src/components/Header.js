@@ -3,6 +3,7 @@ import { LOGO_URL } from "../constant/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../hooks/useOnlineStatus";
 import UserContext from "../context/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
     const [login, setLogin] = useState(true)
@@ -10,7 +11,10 @@ const Header = () => {
     const onlineStatus = useOnlineStatus();
 
     const data = useContext(UserContext);
-    console.log(data);
+    const cartItems = useSelector((store) => store.cart.items);
+    console.log(cartItems, 'cartItems')
+
+    // console.log(data);
 
     //If no dependecy array in useEffect then it will be called after every render
     //If empty dependecy array is passed then it will be called just once after render
@@ -38,7 +42,7 @@ const Header = () => {
                     <Link to='/grocerry'>Grocerry</Link>
                 </li>
                 <li className="px-3">
-                    <Link to='/cart'>Cart</Link>
+                        <Link to='/cart'>Cart-{cartItems.length}</Link>
                 </li>
                 <button className="login-btn" onClick={() => setLogin(!login) }>
                     {btnName}

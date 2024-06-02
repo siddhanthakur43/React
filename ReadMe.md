@@ -68,3 +68,16 @@ Css
 4) Material UI, Bootstrap, Ant Design , Chakra 
 4) Tailwind, postcss
 
+#Episode 11
+Higher Order Component
+Lifting the state up:-Accordian
+Context api
+
+#Episode 12:- Redux
+Install redux tool kit(RTK:- @reduxjs/toolkit) and react-redux
+Build store
+connect store to app
+Slice( Cart Slice)
+dispatch(action)
+Selector
+
